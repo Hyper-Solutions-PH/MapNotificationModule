@@ -1,4 +1,4 @@
 node_modules
-bin
-lib
-obj
+SignalR_GoogleMap_Web/bin
+SignalR_GoogleMap_Web/lib
+SignalR_GoogleMap_Web/obj
