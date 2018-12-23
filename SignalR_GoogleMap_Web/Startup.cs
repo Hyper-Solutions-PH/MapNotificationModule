@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SignalR_GoogleMap_Sqlite.Model;
+using SignalR_GoogleMap_Sqlite.Repository.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace SignalR_GoogleMap_RealTimeNotification
 {
@@ -30,7 +33,10 @@ namespace SignalR_GoogleMap_RealTimeNotification
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            
+            services.AddEntityFrameworkSqlite().AddDbContext<SqliteContext>((serviceProvider, options) =>
+                       options.UseSqlite("Data Source=Orders.db",b=>b.MigrationsAssembly("SignalR_GoogleMap_RealTimeNotification"))
+                              .UseInternalServiceProvider(serviceProvider));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

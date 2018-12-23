@@ -2,3 +2,7 @@ node_modules
 SignalR_GoogleMap_Web/bin
 SignalR_GoogleMap_Web/lib
 SignalR_GoogleMap_Web/obj
+SignalR_GoogleMap_Tests/bin
+SignalR_GoogleMap_Tests/obj
+SignalR_GoogleMap_Sqlite/bin
+SignalR_GoogleMap_Sqlite/obj
