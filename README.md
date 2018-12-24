@@ -58,7 +58,7 @@ $ dotnet build
 $ cd..
 ```
 ## Test Project
-This project will contain all the test menthods that we will write in future for testing our application based on Unit and Integration tests, to setup your test project use:
+This project will contain all the test methods that we will write in future for testing our application based on Unit and Integration tests, to setup your test project use:
 
 ```
 $ cd SignalR_GoogleMap_Tests
@@ -72,7 +72,7 @@ This will create a test project based on xunit framework that will be used in fu
 - UnitTest1.cs
 - SignalR_GoogleMap_Tests.csproj
 ```
-Now after we have successfully craeted our test project we need to build and run test to verify our test project, to do so use:
+Now after we have successfully created our test project we need to build and run test to verify our test project, to do so use:
 ```
 $ dotnet build
 $ dotnet test
@@ -96,9 +96,9 @@ $ dotnet build
 ```
 Now after all this thing we will add the projects to the solution so that we will build and manage project dependency.
 
-## Adding projects to Soltions
+## Adding projects to Solutions
 
-To Add project you need to be in parent directory and by using these comands you can add your projects to the solution.
+To Add project you need to be in parent directory and by using these commands you can add your projects to the solution.
 
 ```
 $ dotnet sln add SignalR_GoogleMap_Tests/SignalR_GoogleMap_Tests.csproj
@@ -133,7 +133,7 @@ $ dotnet run -p .\SignalR_GoogleMap_Web\SignalR_GoogleMap_RealTimeNotification.c
 
 Using launch settings from .\SignalR_GoogleMap_Web\Properties\launchSettings.json...
 info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
-      User profile is available. Using 'C:\Users\abhin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+      User profile is available. Using '~\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
 Hosting environment: Development
 Content root path: D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web
 Now listening on: https://localhost:5001
