@@ -1,5 +1,5 @@
 # Welcome To SignalR
-<img src="https://octodex.github.com/images/droctocat.png" data-canonical-src="https://octodex.github.com/images/droctocat.png" width="100" height="100" />
+<img src="https://octodex.github.com/images/droctocat.png" data-canonical-src="https://octodex.github.com/images/droctocat.png" width="250" height="250" />
 
 # Real Time Notification by SignalR on GoogleMaps
 
