@@ -1,5 +1,5 @@
 # Welcome To SignalR
-![Dr Octabot](https://octodex.github.com/images/droctocat.png)
+![Dr Octabot](https://octodex.github.com/images/droctocat.png | width=100)
 
 # Real Time Notification by SignalR on GoogleMaps
 
