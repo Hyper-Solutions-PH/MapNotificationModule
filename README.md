@@ -83,7 +83,7 @@ $ cd SignalR_GoogleMap_Web
 $ dotnet new mvc
 ```
 This will create new MVC project for you, it looks like this.
-![alt text](SignalR_GoogleMap_RealTimeNotification/Docs/Images/web_architecture.PNG?raw=true "Web Project Architecture")
+![alt text](Docs/Images/web_architecture.PNG)
 
 Now we will build the application.
 ```
