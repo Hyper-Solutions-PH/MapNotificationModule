@@ -1,4 +1,8 @@
-# SignalR_GoogleMap_RealTimeNotification
+# Welcome To SignalR
+![Dr Octabot](https://octodex.github.com/images/droctocat.png)
+
+# Real Time Notification by SignalR on GoogleMaps
+
 Sample application based on .Net Core 2.1, SignalR and Google Maps for real time order booking from SQL.
 
 # Create your projects
@@ -83,6 +87,7 @@ $ cd SignalR_GoogleMap_Web
 $ dotnet new mvc
 ```
 This will create new MVC project for you, it looks like this.
+
 ![alt text](Docs/Images/web_architecture.PNG)
 
 Now we will build the application.
