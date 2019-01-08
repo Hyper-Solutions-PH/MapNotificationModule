@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SignalR_GoogleMap_RealTimeNotification.Models;
 using SignalR_GoogleMap_Sqlite.Model;
+using SignalR_GoogleMap_Sqlite.Repository;
 
 namespace SignalR_GoogleMap_RealTimeNotification.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ISqliteProvider _provider;
+        public HomeController(ISqliteProvider provider)
+        {
+            _provider = provider;
+        }
+
         public IActionResult Index()
         {
+            ViewBag.orders = _provider.GetAll();
             return View();
         }
 
@@ -20,7 +28,15 @@ namespace SignalR_GoogleMap_RealTimeNotification.Controllers
         public IActionResult SaveOrder(OrderViewModel order)
         {
             if (ModelState.IsValid)
-            {}
+            {
+                var newOrder= new Order{
+                    Latitude= order.Latitude,
+                    Longitude=order.Longitude,
+                    OrderTitle= order.OrderTitle,
+                    Status=order.Status
+                };
+                _provider.Insert(newOrder);
+            }
 
             return RedirectToAction("index");
         }

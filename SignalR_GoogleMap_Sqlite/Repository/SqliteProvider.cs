@@ -5,7 +5,7 @@ using SignalR_GoogleMap_Sqlite.Repository.Context;
 
 namespace SignalR_GoogleMap_Sqlite.Repository
 {
-    public class SqliteProvider
+    public class SqliteProvider: ISqliteProvider
     {
         private readonly SqliteContext _context;
         public SqliteProvider(SqliteContext context)
@@ -13,18 +13,21 @@ namespace SignalR_GoogleMap_Sqlite.Repository
             _context=context;
         }
 
-        public List<Order> GetAll(){
+        public List<Order> GetAll()
+        {
             var query = _context.Orders.ToList();
             return query;
         }
 
-        public Order Insert(Order entity){
+        public Order Insert(Order entity)
+        {
             _context.Orders.Add(entity);
             _context.SaveChanges();
             return entity;
         }
 
-        public Order Update(Order entity){
+        public Order Update(Order entity)
+        {
             var exits=_context.Orders.Find(entity.Id);
             if (exits != null)
             {
@@ -34,7 +37,8 @@ namespace SignalR_GoogleMap_Sqlite.Repository
             return entity;
         }
 
-        public Order Remove(Order entity){
+        public Order Remove(Order entity)
+        {
             _context.Orders.Remove(entity);
             _context.SaveChanges();
             return entity;

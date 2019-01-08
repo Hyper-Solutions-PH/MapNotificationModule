@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using SignalR_GoogleMap_Sqlite.Model;
 using SignalR_GoogleMap_Sqlite.Repository.Context;
 using Microsoft.EntityFrameworkCore;
+using SignalR_GoogleMap_Sqlite.Repository;
 
 namespace SignalR_GoogleMap_RealTimeNotification
 {
@@ -37,6 +38,8 @@ namespace SignalR_GoogleMap_RealTimeNotification
             services.AddEntityFrameworkSqlite().AddDbContext<SqliteContext>((serviceProvider, options) =>
                        options.UseSqlite("Data Source=Orders.db",b=>b.MigrationsAssembly("SignalR_GoogleMap_RealTimeNotification"))
                               .UseInternalServiceProvider(serviceProvider));
+
+            services.AddScoped<ISqliteProvider,SqliteProvider>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
