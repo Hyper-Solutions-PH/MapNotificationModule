@@ -10,5 +10,7 @@ If you are a Software Developer and want to learn how I have created this projec
 Enhance your learning by following my short tutorial.
 
 [Start Tutorial][1]
+[Start Full Tutorial][2]
 
-[1]: https://abhinav2127.github.io/MapNotificationModule/
+[1]: Docs/SettingUpApplication.md
+[2]: https://abhinav2127.github.io/MapNotificationModule/
