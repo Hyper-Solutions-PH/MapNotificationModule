@@ -137,5 +137,5 @@ This will run the project
 
 [Previous Topic][1]                                             [Next Topic][2]
 
-[1]: README.md
-[2]: Docs/SQLITESETUP.md
+[1]: ../README.md
+[2]: SQLITESETUP.md
