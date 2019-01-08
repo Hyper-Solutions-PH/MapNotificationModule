@@ -81,7 +81,7 @@ $ dotnet new mvc
 ```
 This will create new MVC project for you, it looks like this.
 
-![alt text](Docs/Images/web_architecture.PNG)
+![alt text](Images/web_architecture.PNG)
 
 Now we will build the application.
 ```
