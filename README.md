@@ -7,7 +7,6 @@ Sample application based on .Net Core 2.1, SignalR and Google Maps for real time
 
 Enhance your learning by following my short tutorial.
 
-| [Start Tutorial][1] |
-| :----- | ----: |
+[Start Tutorial][1]
 
 [1]: https://github.com/abhinav2127/SignalR_GoogleMap_RealTimeNotification/blob/master/SettingUpApplication.md
