@@ -9,4 +9,4 @@ Enhance your learning by following my short tutorial.
 
 [Start Tutorial][1]
 
-[1]: https://github.com/abhinav2127/SignalR_GoogleMap_RealTimeNotification/blob/master/SettingUpApplication.md
+[1]: Docs/SettingUpApplication.md
