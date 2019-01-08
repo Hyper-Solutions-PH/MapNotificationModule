@@ -23,12 +23,12 @@ This will look like this.
 
 We are using few properties that are necessary for crating our application you can change it later according to your need.
 
-![OrderModel](Images/order_model.PNG)
+![OrderModel](Images/Order_model.PNG)
 
 ## SqliteContext
 We will create this context file to handle the database and will inject this context at the time of Startup. To do this first create the SqliteContext
 
-![SqliteContext](Images/Sqlitecontext.PNG)
+![SqliteContext](Images/SqliteContext.PNG)
 
 Now we are set to go and now we can use this class library for connecting to the Database.
 
@@ -65,7 +65,7 @@ $ dotnet ef database update
 ```
 This will create ***Migrations Folder*** and ***Order.db*** file in your web project. Which will look like this.
 
-![Sqlite_Web_Project_Architecture](Images/Sqlite_Web_Project_Architecture.png)
+![Sqlite_Web_Project_Architecture](Images/Sqlite_Web_Project_Architecture.PNG)
 
 We are all set now we will build our solution and run the Web Application.
 ```
