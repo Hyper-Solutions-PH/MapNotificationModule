@@ -143,4 +143,4 @@ So now we are done with CRUD Functionality on Sqlite lets test our application.
 | :----- | ----: |
 
 [1]: https://github.com/abhinav2127/SignalR_GoogleMap_RealTimeNotification/blob/master/README.md
-[2]: https://github.com/abhinav2127/SignalR_GoogleMap_RealTimeNotification/blob/master/Docs/UnitTestingSqlite.md
+[2]: https://github.com/abhinav2127/SignalR_GoogleMap_RealTimeNotification/blob/master/Docs/SQLITESETUP.md
