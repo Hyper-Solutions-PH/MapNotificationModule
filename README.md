@@ -11,4 +11,4 @@ Enhance your learning by following my short tutorial.
 
 [Start Tutorial][1]
 
-[1]: Docs/SettingUpApplication.md
+[1]: https://abhinav2127.github.io/MapNotificationModule/
