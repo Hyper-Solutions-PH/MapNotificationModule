@@ -8,9 +8,8 @@ This module is developed for all the E-Commerce projects that are build with lat
 If you are a Software Developer and want to learn how I have created this project then please feel free to follow my short tutorial. This will guide you on how you can easily create projects on VSCode and how easy is to implement SignalR and combine its power with Google Map.
 
 Enhance your learning by following my short tutorial.
+https://abhinav2127.github.io/MapNotificationModule/
 
 [Start Tutorial][1]
-[Start Full Tutorial][2]
 
 [1]: Docs/SettingUpApplication.md
-[2]: https://abhinav2127.github.io/MapNotificationModule/
