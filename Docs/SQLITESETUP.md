@@ -139,8 +139,7 @@ In the above code I have injected `SqliteContext` in constructor and use it's `O
 
 So now we are done with CRUD Functionality on Sqlite lets test our application.
 
-| [Previous Topic][1] | [Next Topic][2] |
-| :----- | ----: |
+[Previous Topic][1]                                 [Next Topic][2]
 
-[1]: README.md
-[2]: Docs/SQLITESETUP.md
+[1]: SettingUpApplication.md
+[2]: Docs/UnitTestingSqlite.md

@@ -135,8 +135,7 @@ Application started. Press Ctrl+C to shut down.
 ```
 This will run the project
 
-| [Previous Topic][1] | [Next Topic][2] |
-| :----- | ----: |
+[Previous Topic][1]                                             [Next Topic][2]
 
-[1]: https://github.com/abhinav2127/SignalR_GoogleMap_RealTimeNotification/blob/master/README.md
-[2]: https://github.com/abhinav2127/SignalR_GoogleMap_RealTimeNotification/blob/master/Docs/UnitTestingSqlite.md
+[1]: README.md
+[2]: Docs/SQLITESETUP.md
