@@ -1,6 +1,6 @@
 using System;
 
-namespace SignalR_GoogleMap_RealTimeNotification.Models
+namespace SignalR_GoogleMap_Web.Models
 {
     public class ErrorViewModel
     {

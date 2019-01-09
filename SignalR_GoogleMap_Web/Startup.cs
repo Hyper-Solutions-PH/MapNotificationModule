@@ -13,8 +13,9 @@ using SignalR_GoogleMap_Sqlite.Model;
 using SignalR_GoogleMap_Sqlite.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using SignalR_GoogleMap_Sqlite.Repository;
+using SignalR_GoogleMap_Web.Hubs;
 
-namespace SignalR_GoogleMap_RealTimeNotification
+namespace SignalR_GoogleMap_Web
 {
     public class Startup
     {
@@ -41,6 +42,9 @@ namespace SignalR_GoogleMap_RealTimeNotification
 
             services.AddScoped<ISqliteProvider,SqliteProvider>();
 
+            // Configuring SignalR
+            services.AddSignalR();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -60,6 +64,11 @@ namespace SignalR_GoogleMap_RealTimeNotification
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<OrderFeedHub>("/orderFeedHub");
+            });
 
             app.UseMvc(routes =>
             {

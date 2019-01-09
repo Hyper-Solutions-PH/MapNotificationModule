@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR_GoogleMap_RealTimeNotification", "SignalR_GoogleMap_Web\SignalR_GoogleMap_RealTimeNotification.csproj", "{A29B5D5A-848B-4370-A0B7-E30A1E751B82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR_GoogleMap_Web", "SignalR_GoogleMap_Web\SignalR_GoogleMap_Web.csproj", "{A29B5D5A-848B-4370-A0B7-E30A1E751B82}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR_GoogleMap_Sqlite", "SignalR_GoogleMap_Sqlite\SignalR_GoogleMap_Sqlite.csproj", "{AF0999F5-5168-4FBB-845B-174C6954AB6E}"
 EndProject

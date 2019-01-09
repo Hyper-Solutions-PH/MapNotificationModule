@@ -44,4 +44,69 @@ To do this follow these steps:
   This is how web project looks after this process.
   
   <img src="images/Removed_Node_Package.PNG" width=200>
-- 
+
+## Create a SignalR hub
+A hub is a class that serves as a high-level pipeline that handles client-server communication.
+
+In the `SignalR_GoogleMap_Web` project folder, create a Hubs folder.
+  ``` c#
+  using Microsoft.AspNetCore.SignalR;
+  using System.Threading.Tasks;
+  using SignalR_GoogleMap_Sqlite.Model;
+  using SignalR_GoogleMap_Sqlite.Repository;
+  using System.Collections.Generic;
+  
+  namespace SignalR_GoogleMap_Web
+  {
+    public class OrderFeedHub : Hub
+    {
+        private readonly ISqliteProvider _provider;
+        public OrderFeedHub(ISqliteProvider provider)
+        {
+            _provider=provider;
+        }
+        public async Task<List<Order>> SendOrderDetail()
+        {
+            return _provider.GetAll();
+        }
+    }
+  }
+  ```
+  The `OrderFeedHub` class inherits from the SignalR Hub class. The Hub class manages connections, groups, and messaging.
+
+  The `SendOrderDetail` method can be called by a connected client to send a latest orders to all clients. JavaScript client code that calls the method is shown later in the tutorial. SignalR code is asynchronous to provide maximum scalability.
+
+## Configure SignalR
+The SignalR server must be configured to pass SignalR requests to SignalR.
+``` c#
+---
+using SignalR_GoogleMap_Web.Hubs;
+
+namespace SignalR_GoogleMap_Web
+{
+    public class Startup
+    {
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            ----
+            // Configuring SignalR
+            services.AddSignalR();
+            ----
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+            ----
+            // Setup route for the orderFeedHub
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<OrderFeedHub>("/orderFeedHub");
+            });
+            ----
+        }
+    }
+}
+```
+Copy these lines as shown above.

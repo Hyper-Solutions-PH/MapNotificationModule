@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SignalR_GoogleMap_RealTimeNotification.Models;
+using SignalR_GoogleMap_Web.Models;
 using SignalR_GoogleMap_Sqlite.Model;
 using SignalR_GoogleMap_Sqlite.Repository;
 
-namespace SignalR_GoogleMap_RealTimeNotification.Controllers
+namespace SignalR_GoogleMap_Web.Controllers
 {
     public class HomeController : Controller
     {

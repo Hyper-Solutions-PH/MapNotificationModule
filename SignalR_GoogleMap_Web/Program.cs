@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace SignalR_GoogleMap_RealTimeNotification
+namespace SignalR_GoogleMap_Web
 {
     public class Program
     {
