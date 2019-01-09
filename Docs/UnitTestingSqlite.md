@@ -107,3 +107,7 @@ Arrange: We define and initiate all the requirements that we will use at the tim
 Act: After Arranging everything we need to run the actual method for gathering the results from the method call
 Assert: After gathering results we validate them with the help of Assert methods. For Example: Assert.Equal(), Assert.Empty() etc..
 
+[Previous Topic][1] <br>                                [Next Topic][2]
+
+[1]: SQLITESETUP.md
+[2]: SettingUpApplication.md

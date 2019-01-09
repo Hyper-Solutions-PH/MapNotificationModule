@@ -135,7 +135,7 @@ Application started. Press Ctrl+C to shut down.
 ```
 This will run the project
 
-[Previous Topic][1]                                             [Next Topic][2]
+[Previous Topic][1] <br>                                     [Next Topic][2]
 
 [1]: ../README.md
 [2]: SQLITESETUP.md
