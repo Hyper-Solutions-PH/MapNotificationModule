@@ -110,4 +110,4 @@ Assert: After gathering results we validate them with the help of Assert methods
 [Previous Topic][1] <br>                                [Next Topic][2]
 
 [1]: SQLITESETUP.md
-[2]: SettingUpApplication.md
+[2]: SettingUpSignalR.md
