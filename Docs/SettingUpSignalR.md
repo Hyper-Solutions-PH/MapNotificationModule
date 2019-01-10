@@ -28,7 +28,7 @@ To do this follow these steps:
 
   Now you can find `node_modules` folder containing all the packages for the project.
 
-  <img src="images/Node_Package_Install.PNG" width=200>
+  ![Node_Package_Install](Images/Node_Package_Install.PNG)
 
 - Add `signalr.js` to the Web project you will find this file inside your node module.
   ```
@@ -43,7 +43,7 @@ To do this follow these steps:
   
   This is how web project looks after this process.
   
-  <img src="images/Removed_Node_Package.PNG" width=200>
+  ![Removed_Node_Package](Images/Removed_Node_Package.PNG)
 
 ## Create a SignalR hub
 A hub is a class that serves as a high-level pipeline that handles client-server communication.
@@ -110,3 +110,6 @@ namespace SignalR_GoogleMap_Web
 }
 ```
 Copy these lines as shown above.
+
+## Add SignalR client code
+- Replace the content in `Views\Home\Map.cshtml` with the following code:
