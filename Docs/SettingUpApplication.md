@@ -106,11 +106,11 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
   Restore completed in 117.48 ms for D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Sqlite\SignalR_GoogleMap_Sqlite.csproj.
   Restore completed in 119.66 ms for D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Tests\SignalR_GoogleMap_Tests.csproj.
-  Restore completed in 169.47 ms for D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web\SignalR_GoogleMap_RealTimeNotification.csproj.
+  Restore completed in 169.47 ms for D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web\SignalR_GoogleMap_Web.csproj.
   SignalR_GoogleMap_Tests -> D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Tests\bin\Debug\netcoreapp2.1\SignalR_GoogleMap_Tests.dll
   SignalR_GoogleMap_Sqlite -> D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Sqlite\bin\Debug\netstandard2.0\SignalR_GoogleMap_Sqlite.dll
-  SignalR_GoogleMap_RealTimeNotification -> D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web\bin\Debug\netcoreapp2.1\SignalR_GoogleMap_RealTimeNotification.dll
-  SignalR_GoogleMap_RealTimeNotification -> D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web\bin\Debug\netcoreapp2.1\SignalR_GoogleMap_RealTimeNotification.Views.dll
+  SignalR_GoogleMap_RealTimeNotification -> D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web\bin\Debug\netcoreapp2.1\SignalR_GoogleMap_Web.dll
+  SignalR_GoogleMap_RealTimeNotification -> D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web\bin\Debug\netcoreapp2.1\SignalR_GoogleMap_Web.Views.dll
 
 Build succeeded.
     0 Warning(s)
@@ -122,13 +122,13 @@ Time Elapsed 00:00:02.15
 To run this website we will use:
 
 ```
-$ dotnet run -p .\SignalR_GoogleMap_Web\SignalR_GoogleMap_RealTimeNotification.csproj
+$ dotnet run -p .\SignalR_GoogleMap_Web\SignalR_GoogleMap_Web.csproj
 
 Using launch settings from .\SignalR_GoogleMap_Web\Properties\launchSettings.json...
 info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[0]
       User profile is available. Using '~\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
 Hosting environment: Development
-Content root path: D:\Projects\Github\.Net Projects\SignalR_GoogleMap_RealTimeNotification\SignalR_GoogleMap_Web
+Content root path: D:\Projects\Github\.Net Projects\SignalR_GoogleMap_Web\SignalR_GoogleMap_Web
 Now listening on: https://localhost:5001
 Now listening on: http://localhost:5000
 Application started. Press Ctrl+C to shut down.

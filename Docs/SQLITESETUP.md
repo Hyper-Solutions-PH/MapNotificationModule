@@ -71,7 +71,7 @@ We are all set now we will build our solution and run the Web Application.
 ```
 $ cd..
 $ dotnet build
-$ dotnet run -p .\SignalR_GoogleMap_Web\SignalR_GoogleMap_RealTimeNotification.csproj
+$ dotnet run -p .\SignalR_GoogleMap_Web\SignalR_GoogleMap_Web.csproj
 ```
 
 ## SqliteProvider
