@@ -6,10 +6,8 @@
 // Initialize and add the map
 
 // imported google map js
-$.getScript('https://maps.googleapis.com/maps/api/js?key=Your-API-Key&callback=initMap', function () {
-});
-
-// Custom marker icon image path
+$.getScript('https://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry,places&ext=.js', function () {
+    // Custom marker icon image path
 var baseIconPath = "https://localhost:5001/";
 var markerImages = {
     completed: {
@@ -70,3 +68,7 @@ function initMap() {
         }
     });
 }
+initMap();
+});
+
+
