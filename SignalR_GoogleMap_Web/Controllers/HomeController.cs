@@ -41,6 +41,11 @@ namespace SignalR_GoogleMap_Web.Controllers
             return RedirectToAction("index");
         }
 
+        public IActionResult Map()
+        {
+            return View();
+        }
+
         public IActionResult Technology()
         {
             ViewData["Message"] = "Your application description page.";

@@ -9,6 +9,8 @@ The Persistent Connection API gives developer direct access to the low level com
 `Hubs`: 
 It's a High Level API written over Persistent Connection. This API allows the client and server to call methods on each other directly. Hubs also allow you to pass strongly typed parameters to methods, enabling model binding.
 
+For deep learning I would suggest you to read [SignalR Documentation](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr)
+
 ## Adding SignalR
 The SignalR server library is included in the Microsoft.AspNetCore.App metapackage. The JavaScript client library isn't automatically included in the project. For this tutorial, you use NPM to get the client library from node module.
 
@@ -111,5 +113,9 @@ namespace SignalR_GoogleMap_Web
 ```
 Copy these lines as shown above.
 
-## Add SignalR client code
-- Replace the content in `Views\Home\Map.cshtml` with the following code:
+Now we are done with SignalR Server our server is ready to be used. So in the `Next Chapter` we will implement Google Map Api with static locations.
+
+[Previous Topic][1] <br>                                [Next Topic][2]
+
+[1]: UnitTestingSqlite.md
+[2]: SettingUpGoogleMap.md
