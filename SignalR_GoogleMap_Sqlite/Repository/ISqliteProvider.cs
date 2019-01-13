@@ -8,6 +8,7 @@ namespace SignalR_GoogleMap_Sqlite.Repository
     public interface ISqliteProvider
     {
         List<Order> GetAll();
+        Order Get(int orderId);
         Order Insert(Order entity);
         Order Update(Order entity);
         Order Remove(Order entity);

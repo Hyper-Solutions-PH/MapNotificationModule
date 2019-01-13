@@ -7,15 +7,19 @@ using Microsoft.AspNetCore.Mvc;
 using SignalR_GoogleMap_Web.Models;
 using SignalR_GoogleMap_Sqlite.Model;
 using SignalR_GoogleMap_Sqlite.Repository;
+using SignalR_GoogleMap_Web.Hubs;
+using SignalR_GoogleMap_Sqlite.Utility;
 
 namespace SignalR_GoogleMap_Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly OrderFeedHub _hub;
         private readonly ISqliteProvider _provider;
         public HomeController(ISqliteProvider provider)
         {
             _provider = provider;
+            _hub = new OrderFeedHub(_provider);
         }
 
         public IActionResult Index()
@@ -29,15 +33,51 @@ namespace SignalR_GoogleMap_Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var newOrder= new Order{
-                    Latitude= order.Latitude,
-                    Longitude=order.Longitude,
-                    OrderTitle= order.OrderTitle,
-                    Status=order.Status
+                var newOrder = new Order
+                {
+                    Latitude = order.Latitude,
+                    Longitude = order.Longitude,
+                    OrderTitle = order.OrderTitle,
+                    Status = order.Status
                 };
-                _provider.Insert(newOrder);
+                if (order.OrderId > 0)
+                {
+                    newOrder.Id = order.OrderId;
+                    _provider.Update(newOrder);
+                }
+                else
+                    _provider.Insert(newOrder);
             }
+            // Updating hub when a new order is inserted.
+            _hub.SendOrderDetail(Utility.ClientSignalRReceivingMethodName);
+            return RedirectToAction("index");
+        }
 
+        // [HttpPost]
+        // public IActionResult UpdateOrder(Order order)
+        // {
+        //     var newOrder = new OrderViewModel
+        //     {
+        //         OrderId = order.Id,
+        //         Latitude = order.Latitude,
+        //         Longitude = order.Longitude,
+        //         OrderTitle = order.OrderTitle,
+        //         Status = order.Status
+        //     };
+
+        //     return RedirectToAction("index");
+        // }
+
+        [HttpGet]
+        public IActionResult RemoveOrder(int orderId)
+        {
+            if (orderId > 0)
+            {
+                var orderDetail = _provider.Get(orderId);
+                _provider.Remove(orderDetail);
+            }
+            // Updating hub when an order is removed.
+            _hub.SendOrderDetail(Utility.ClientSignalRReceivingMethodName);
             return RedirectToAction("index");
         }
 

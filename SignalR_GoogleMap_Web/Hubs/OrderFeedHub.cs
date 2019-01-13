@@ -11,11 +11,12 @@ namespace SignalR_GoogleMap_Web.Hubs
         private readonly ISqliteProvider _provider;
         public OrderFeedHub(ISqliteProvider provider)
         {
-            _provider=provider;
+            _provider = provider;
         }
-        public async Task<List<Order>> SendOrderDetail()
+        public async Task SendOrderDetail(string name)
         {
-            return _provider.GetAll();
+            var orders = _provider.GetAll();
+            await Clients.All.SendAsync(name, orders);
         }
     }
 }

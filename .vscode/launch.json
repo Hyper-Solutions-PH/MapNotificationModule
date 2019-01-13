@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/SignalR_GoogleMap_Web/bin/Debug/netcoreapp2.1/SignalR_GoogleMap_RealTimeNotification.dll",
+            "program": "${workspaceFolder}/SignalR_GoogleMap_Web/bin/Debug/netcoreapp2.1/SignalR_GoogleMap_Web.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SignalR_GoogleMap_Web",
             "stopAtEntry": false,

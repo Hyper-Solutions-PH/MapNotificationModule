@@ -35,12 +35,12 @@ namespace SignalR_GoogleMap_Web
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            
+
             services.AddEntityFrameworkSqlite().AddDbContext<SqliteContext>((serviceProvider, options) =>
-                       options.UseSqlite("Data Source=Orders.db",b=>b.MigrationsAssembly("SignalR_GoogleMap_RealTimeNotification"))
+                       options.UseSqlite("Data Source=Orders.db", b => b.MigrationsAssembly("SignalR_GoogleMap_RealTimeNotification"))
                               .UseInternalServiceProvider(serviceProvider));
 
-            services.AddScoped<ISqliteProvider,SqliteProvider>();
+            services.AddScoped<ISqliteProvider, SqliteProvider>();
 
             // Configuring SignalR
             services.AddSignalR();

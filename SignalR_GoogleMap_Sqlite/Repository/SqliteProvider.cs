@@ -19,6 +19,12 @@ namespace SignalR_GoogleMap_Sqlite.Repository
             return query;
         }
 
+        public Order Get(int orderId)
+        {
+            var query = _context.Orders.Where(x=>x.Id.Equals(orderId)).FirstOrDefault();
+            return query;
+        }
+
         public Order Insert(Order entity)
         {
             _context.Orders.Add(entity);
