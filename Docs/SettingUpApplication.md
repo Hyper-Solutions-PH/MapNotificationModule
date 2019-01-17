@@ -1,23 +1,37 @@
-# Create your projects
+# Create MVC WebApp
 
-Create new solution file to manage projects, using:
+I'm using Visual Studio Code for this project to learn how I can use the command prompt to develop and deploy web applications. My main focus is to show you guys how we can work with these platforms.
+
+In this tutorial, I am focusing on developing a production web application that will provide real-time order notification to all the clients using our `SignalR` hub. I'm gonna show you how we can use `SQLite` to store order details for development purpose.
+
+So let's start with this tutorial. First, we will create our solution file, from where we can start on creating projects.
+
+`Dotnet` provides a simple way to generate solution file from command prompt. Open the terminal by selecting `Ctrl + R` and type `cmd` in run window and press `enter`. Type the following command in the terminal.
+
+```
+$ mkdir MapNotificationModule
+$ cd MapNotificationModule
+```
+
+Above snippet will create a directory for you inside which you can create your solution file. If you are using an existing directory, you can create a solution file.
 
 ```
 $ dotnet new sln
 ```
 
-This will create new solution file for you.
+The above snippet will create a new solution file for you. In case you don't specify the solution name it will take the parent directory name. For more details, you can refer to this [dotnet sln](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-sln).
 
-Now we need to create our applications, for this project we need three applications WEB, SQLITE, and Test.
+After this, I will create a dotNet project for three different tasks. As I discussed earlier in this tutorial about using `SQLite` to store order records, I will create a test application to test my progress and a web interface for creating and managing orders and map notifications.
 
-Create Directories
+So let's create directories for storing projects.
 
 ```
 $ mkdir SignalR_GoogleMap_Web
 $ mkdir SignalR_GoogleMap_Sqlite
 $ mkdir SignalR_GoogleMap_Tests
 ```
-This will create new directories for holding your projects, which will look like this.
+
+The above snippet will create new directories for holding your projects, which will look like this.
 
 ```
 |- SignalR_GoogleMap_RealTimeNotification
@@ -32,25 +46,40 @@ This will create new directories for holding your projects, which will look like
 
 ## Sqlite project
 
-This is a class library that will handle all the Database related context, to setup your class library use:
+SQLite is a small, fast and embeddable database where the database engine and the interface are combined into a single library. It also has the ability to store all the data in a single file. So if your application requires a standalone database, SQLite is perhaps the perfect choice for you. There are, of course, other reasons for choosing SQLite including:
 
+- SQLite has a small memory footprint and only a single library is required to access databases, making it ideal for embedded database applications.
+- SQLite has been ported to many platforms and runs even on Windows CE and Palm OS.
+- SQLite is ACID-compliant, meeting all four criteria - Atomicity, Consistency, Isolation, and Durability.
+- SQLite implements a large subset of the ANSI-92 SQL standard, including views, sub-queries and triggers.
+- No problem of extra database drivers, ODBC configuration required. Just include the library and the data file with your application.
+- SQLite has native language APIs for C/C++, PHP, Perl, Python, Tcl etc. Native API for C# is still not present.
+
+### Using the Code
+
+To use `SQLite` I will create a class library for database communication. So let's create class library.
 ```
 $ cd SignalR_GoogleMap_Sqlite
 $ dotnet new classlib
 ```
-This will create a class library for you that will look like this.
+
+The above snippet will create a class library for you that will look like this.
+
 ```
 |- SignalR_GoogleMap_Sqlite
     |- bin
 - Class1.cs
 - SignalR_GoogleMap_Sqlite.csproj
 ```
-Now before we move forward happily we need to build our class library.
+
+Now lets build our class library and move to the test project.
+
 ```
 $ dotnet build
 $ cd..
 ```
 ## Test Project
+
 This project will contain all the test methods that we will write in future for testing our application based on Unit and Integration tests, to setup your test project use:
 
 ```
